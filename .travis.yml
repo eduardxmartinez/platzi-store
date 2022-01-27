@@ -18,6 +18,8 @@ notifications:
       - oscar@arepa.dev
     on_success: always
     on_failure: always
+notifications:
+slack: deploysgroup:0QL8zEfI4USBVac5VBfJbAhp
 deploy:
   provider: pages
   skip-cleanup: true
