@@ -1,7 +1,6 @@
 language: node_js
 cache:
   directories:
-<<<<<<< HEAD
     - ~/.npm
 node_js:
   - '12'
@@ -19,34 +18,5 @@ deploy:
   local-dir: dist/
   target-branch: gh-pages
   commit_message: "Deploy release ${TRAVIS_TAG}"
-=======
-    - node_modules
-    - ~/.npm
-node_js:
-  - "12"
-
-git:
-  depth: 3
-
-script:
-  - yarn build
-notifications:
-  email:
-    recipients:
-      - oscar@platzi.com
-      - oscar@arepa.dev
-    on_success: always
-    on_failure: always
-notifications:
-slack: deploysgroup:0QL8zEfI4USBVac5VBfJbAhp
-deploy:
-  provider: pages
-  skip-cleanup: true
-  keep-history: true
-  gitgub-token: $GITHUB_TOKEN
-  local-dir: dist/
-  target-brunch: gh-pages
-  commit-message: "Deploy"
->>>>>>> 5f87a9e9b18cdb0287e90622ee6f607ba5b3e708
   on:
     branch: master
